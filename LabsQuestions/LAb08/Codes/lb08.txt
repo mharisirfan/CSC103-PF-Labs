@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void test(void);
+
+int m = 22, n = 44;
+float a = 50.5, b = 8.79;
+
+int main()
+{
+    int x, y = 5, z = -5;
+    int *ptr1 = &x;
+    int *ptr2 = &y;
+    int *ptr3 = &z;
+
+
+    printf("The value of local variable x is %d at address %u\n\n",*ptr1,ptr1);
+    printf("The value of local variable y is %d at address %u\n\n",*ptr2,ptr2);
+    printf("The value of local variable z is %d at address %u\n\n",*ptr3,ptr3);
+    printf("The value of global variable m is %d at address %u\n\n",m,&m);
+    printf("The value of global variable n is %d at address %u\n\n",n,&n);
+    printf("The value of global variable a is %f at address %u\n\n",a,&a);
+    printf("The value of global variable b is %f at address %u\n\n",b,&b);
+    test();
+}
+
+void test()
+{
+    char ch1 = 'F', ch2 = 69, ch3 = 100;
+    int x = 5, y = 55, z = 8;
+
+    printf("The value of local variable ch1 is %c at address %u\n\n",ch1,&ch1);
+    printf("The value of local variable ch2 is %c at address %u\n\n",ch2,&ch2);
+    printf("The value of local variable ch3 is %c at address %u\n\n",ch3,&ch3);
+    printf("The value of local variable x is %d at address %u\n\n",x,&x);
+    printf("The value of local variable y is %d at address %u\n\n",y,&y);
+    printf("The value of local variable z is %d at address %u\n\n",z,&z);
+}
